@@ -34,7 +34,7 @@ resource "google_compute_instance" "gitlab-ci-runner" {
         type = "ssh"
         user = "ubuntu"
         agent = "false"
-        private_key = "${file("${var.ssh_key}.pem")}"
+        private_key = "${file("${var.ssh_key}")}"
     }
 
     boot_disk {
